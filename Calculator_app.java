@@ -130,6 +130,7 @@ public class Calculator_app extends Frame implements ActionListener{
         } else if (e.getSource()==del) {
             if(val.endsWith("+") || val.endsWith("-") || val.endsWith("x") || val.endsWith("/")){
                 pros="";
+                check=0;
             }
             else{
                 num[i] = (int) (num[i]/10.0);
@@ -141,6 +142,7 @@ public class Calculator_app extends Frame implements ActionListener{
             val="";
             num[0]=0;
             num[1]=0;
+            check=0;
             t.setText(val);
 
         } else if (e.getSource()==ba ) {
