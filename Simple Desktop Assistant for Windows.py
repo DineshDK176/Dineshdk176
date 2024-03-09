@@ -1,4 +1,5 @@
 import os,webbrowser,pyttsx3,mediawiki,subprocess
+import wolframalpha as wa
 import pywhatkit as yt
 import datetime as dt
 import speech_recognition as sr
@@ -44,80 +45,80 @@ def r_voice():
 
 def pros(query):
     con = ''
-    query = query.replace(' ','')
-    if 'goodbye' in query  or 'bye' in query:
+    #query = query.replace(' ','')
+    if ('goodbye' in query)  or ('bye' in query):
         con = 'n'
         
-    elif 'commandprompt' in query or 'cmd' in query:
+    elif ('commandprompt' in query) or ('cmd' in query):
         speak('Openning...')
         os.startfile('cmd')     
         con = input("Are you continue (Y/N):").lower()
 
-    elif 'paint' in query:
+    elif ('paint' in query):
         speak('Openning...')
         os.startfile('mspaint.exe')
         con = input("Are you continue (Y/N):").lower()
 
-    elif 'setting' in query or 'controlpanel' in query:
+    elif ('setting' in query) or ('controlpanel' in query):
         speak('Openning...')
         os.startfile('control.exe')
         con = input("Are you continue (Y/N):").lower()
 
-    elif 'calculator' in query:
+    elif ('calculator' in query):
         speak('Openning...')
         os.startfile('calc.exe')
         con = input("Are you continue (Y/N):").lower()
 
-    elif "chrome" in query or "browser" in query:
+    elif ("chrome" in query) or ("browser" in query):
         speak("Opening Chrome...")
         os.startfile("chrome.exe")
         con = input("Are you continue (Y/N):").lower()
         
-    elif "firefox" in query:
+    elif ("firefox" in query):
         speak("Opening Firefox...")
         os.startfile("firefox.exe")
         con = input("Are you continue (Y/N):").lower()
 
-    elif "texteditor" in query or "notepad" in query:
+    elif ("texteditor" in query) or ("notepad" in query):
         speak("Opening...")
         os.startfile("Notepad.exe")
         con = input("Are you continue (Y/N):").lower()
         
-    elif "wordpad" in query:
+    elif ("wordpad" in query):
         speak("Openning...")
         os.startfile("wordpad.exe")
         con = input("Are you continue (Y/N):").lower()
             
-    elif "folder" in query or "explorer" in query or "file" in query:
+    elif ("folder" in query) or ("explorer" in query) or ("file" in query):
         speak("Opening...")
         os.startfile("explorer.exe")
         con = input("Are you continue (Y/N):").lower()
             
-    elif "vlc" in query or "videoplayer" in query:
+    elif ("vlc" in query) or ("videoplayer" in query):
         speak("Opening...")
         os.startfile("vlc.exe")
         con = input("Are you continue (Y/N):").lower()
             
-    elif "windowsmediaplayer" in query or 'mediaplayer' in query:
+    elif ("windowsmediaplayer" in query) or ('mediaplayer' in query):
         speak("Openning...")
         os.startfile("wmplayer.exe")
         con = input("Are you continue (Y/N):").lower()
 
-    elif "search" in query:
+    elif ("search" in query):
         speak("Searching....")
         query = query.replace("search","")
         query = query.replace(" ","")
         webbrowser.open(f"google.com/search?q={query}")
         con = input("Are you continue (Y/N):").lower()
 
-    elif "youtube" in query:
+    elif ("youtube" in query):
         speak("Opening Youtube...")
         query = query.replace("youtube","")
         query = query.replace(" ","")
         webbrowser.open(f"youtube.com/results?search_query={query}")
         con = input("Are you continue (Y/N):").lower()
 
-    elif "wikipedia" in query:
+    elif ("wikipedia" in query):
         mk = mediawiki.MediaWiki()
         speak("searching in wikipedia")
         query = query.replace("wikipedia","")
@@ -128,7 +129,7 @@ def pros(query):
             speak("Do You want to Save this Content..")
             save = input("(Y/N)").lower()
             
-            if save == 'y':
+            if (save == 'y'):
                 speak("Where You want to Save this content.")
                 path = input("Enter Full Path : ")
                 file = open(path,'w')
@@ -139,24 +140,30 @@ def pros(query):
         except mediawiki.DisambiguationError as e:
             speak("Sorry the Information you looking is couldn't find...!")
             
-    elif "play" in query:
+    elif ("play" in query):
         speak("Starting...")
         query = query.replace("play","")
         yt.playonyt(query)
         con = input("Are you continue (Y/N):").lower()
 
-    elif "shutdown" in query or "switchoff" in query or "poweroff" in query :
+    elif ("shutdown" in query) or ("switchoff" in query) or ("poweroff" in query):
         subprocess.run(["shutdown","-s"])
         con = "n"
 
     else:
-        speak("Sorry I can't Understand what you Trying to Say!!")
 
-            
+        clt = wa.Client('GPGV2J-KG8TVJT6YT')
+        res = clt.query(query)
+        ans=''
+        for i in res.results:
+            ans+=i.text
+        speak('data not found 'if ans == '' else ans)
+                            
     if(con == 'n'):
         speak("Ok GoodBye Thank you for Interacting with Me..")
         
     elif(con != 'n' and con != 'y' and con!=''):
+        print(e)
         speak("I can't Understand.Please give valid input")
 
     return con
