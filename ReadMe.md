@@ -1,7 +1,6 @@
-### Hello, I'm Dinesh.
-------------
-*1st Year BE.Electrical Engineering Student @TCE, Coimbatore*
-#### Intermediate Developer in:
+## Hello, I'm Dinesh.
+##### *1st Year BE.Electrical Engineering Student @TCE, Coimbatore*
+### Intermediate Developer in:
 <img width="50" height="50" src="https://img.icons8.com/fluency/48/c-programming.png" alt="c-programming"/> <img width="50" height="50" src="https://img.icons8.com/fluency/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/java-coffee-cup-logo.png" alt="java-coffee-cup-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/python.png" alt="python"/> 
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/Dinesh_K?theme=dark&font=Marcellus&ext=activity)
