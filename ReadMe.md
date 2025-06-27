@@ -1,7 +1,7 @@
 ## Hello, I'm Dinesh.
 ##### 1st Year BE.Electrical Engineering Student
 ### Intermediate Developer in:
-<img width="50" height="50" src="https://img.icons8.com/fluency/48/c-programming.png" alt="c-programming"/> <img width="50" height="50" src="https://img.icons8.com/fluency/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/java-coffee-cup-logo.png" alt="java-coffee-cup-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/python.png" alt="python"/> 
+<img width="50" height="50" src="https://img.icons8.com/fluency/48/c-programming.png" alt="c-programming"/> <img width="50" height="50" src="https://img.icons8.com/fluency/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/java-coffee-cup-logo.png" alt="java-coffee-cup-logo"/> <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/python.png" alt="python"/> <img width="50" height="50" src="https://img.icons8.com/?size=100&id=65231&format=png&color=000000">
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/Dinesh_K_009?theme=dark&font=Marcellus&ext=contest)
 
